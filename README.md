@@ -8,8 +8,7 @@ using a discriminator field with Hibernate.
 Run the app:
 
 ```sh-session
-$ createdb springbootmultitenant
-$ export SPRING_DATASOURCE_URL="jdbc:postgresql://localhost:5432/springbootmultitenant"
+$ createdb spring-multi-tenancy
 $ ./mvnw clean spring-boot:run
 ```
 
