@@ -42,11 +42,15 @@ $ curl localhost:8080/api/employee -H "X-TenantID: tenant3"
 
 ## More Info
 
-* https://github.com/ramsrib/multi-tenant-app-demo
 * https://hibernate.atlassian.net/browse/HHH-6054
 * https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#multitenacy
 * https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#mapping-column-filter
 * https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#events
+
+## Other Examples
+
+* https://github.com/ramsrib/multi-tenant-app-demo
+* https://github.com/spring-labs/tenancy-sample
 
 ## License
 
