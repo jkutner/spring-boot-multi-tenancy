@@ -5,11 +5,15 @@ using a discriminator field with Hibernate.
 
 ## Usage
 
+Run the app:
+
 ```sh-session
 $ createdb springbootmultitenant
 $ export SPRING_DATASOURCE_URL="jdbc:postgresql://localhost:5432/springbootmultitenant"
 $ ./mvnw clean spring-boot:run
 ```
+
+From another terminal:
 
 ```sh-session
 $ curl localhost:8080/api/employee -H "X-TenantID: tenant1" 
