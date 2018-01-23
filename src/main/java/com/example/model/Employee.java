@@ -10,18 +10,15 @@ import org.hibernate.annotations.ParamDef;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "employees")
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @FilterDef(name = "tenantFilter", parameters = {@ParamDef(name = "tenantId", type = "string")})
 @Filter(name = "tenantFilter", condition = "tenant_id = :tenantId")
 public class Employee implements TenantSupport {
-
   @Id
   @GeneratedValue
   private UUID id;
@@ -31,5 +28,4 @@ public class Employee implements TenantSupport {
   private String lastName;
 
   private String tenantId;
-
 }
