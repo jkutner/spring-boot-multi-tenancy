@@ -15,16 +15,16 @@ $ ./mvnw clean spring-boot:run
 From another terminal:
 
 ```sh-session
-$ curl localhost:8080/api/employee -H "X-TenantID: tenant1" 
+$ curl localhost:8080/employees -H "X-TenantID: tenant1" 
 [{"userId":"16b5308b-6bb8-4a75-ae93-66dc71a0b981","firstName":"John","lastName":"Doe","tenantId":"tenant1"}]
 
-$ curl localhost:8080/api/employee -H "X-TenantID: tenant3" 
+$ curl localhost:8080/employees -H "X-TenantID: tenant3" 
 []
 
-$ curl localhost:8080/api/employee -H "X-TenantID: tenant3" -H "Content-Type: application/json" -X POST -d '{"firstName":"joe"}'
+$ curl localhost:8080/employees -H "X-TenantID: tenant3" -H "Content-Type: application/json" -X POST -d '{"firstName":"joe"}'
 {"userId":"c77ad6bb-b2ad-47f7-b21c-3e50deb6a574","firstName":"joe","lastName":null,"tenantId":"tenant3"}
 
-$ curl localhost:8080/api/employee -H "X-TenantID: tenant3" 
+$ curl localhost:8080/employees -H "X-TenantID: tenant3" 
 [{"userId":"c77ad6bb-b2ad-47f7-b21c-3e50deb6a574","firstName":"joe","lastName":null,"tenantId":"joe"}]
 ```
 
